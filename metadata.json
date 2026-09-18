@@ -1,0 +1,6 @@
+{
+  "name": "Airfryer Económica",
+  "description": "250 Receitas Portuguesas Rápidas e Deliciosas para Poupar Tempo e Dinheiro na Cozinha. Ficheiro PDF com ingredientes nacionais e poupança real na fatura da luz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
