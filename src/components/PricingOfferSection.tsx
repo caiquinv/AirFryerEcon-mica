@@ -3,10 +3,10 @@ import { CheckCircle2, Sparkles, ShieldCheck, Zap, Mail, Lock } from 'lucide-rea
 import { PRICING_DATA } from '../data/content';
 
 interface PricingOfferSectionProps {
-  onOpenCheckout: () => void;
+  onOpenCheckout?: () => void;
 }
 
-export const PricingOfferSection: React.FC<PricingOfferSectionProps> = ({ onOpenCheckout }) => {
+export const PricingOfferSection: React.FC<PricingOfferSectionProps> = () => {
   const cashPrice = PRICING_DATA.promoCashPrice;
   const originalTotal = PRICING_DATA.originalTotal;
 
@@ -118,14 +118,16 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = ({ onOpen
 
             {/* Big Green Action Button */}
             <div className="mt-5">
-              <button
-                onClick={onOpenCheckout}
+              <a
+                href="https://pay.hotmart.com/D107662872I"
+                target="_blank"
+                rel="noopener noreferrer"
                 id="pricing-cta-button"
-                className="w-full group inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-xl transition-all cursor-pointer border-t border-emerald-300"
+                className="w-full group inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-xl transition-all cursor-pointer border-t border-emerald-300 text-center"
               >
                 <span>SIM, QUERO AS 250 RECEITAS EM PORTUGAL!</span>
                 <span className="group-hover:translate-x-1.5 transition-transform duration-200">➔</span>
-              </button>
+              </a>
 
               <p className="mt-3 text-center text-[11px] text-stone-500 font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />

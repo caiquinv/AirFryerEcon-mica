@@ -70,7 +70,7 @@ export default function App() {
         <CommunitySection />
 
         {/* 11. Complete Bundle Pricing & Offer */}
-        <PricingOfferSection onOpenCheckout={handleOpenCheckout} />
+        <PricingOfferSection />
 
         {/* 12. 7-Day Zero Risk Guarantee */}
         <GuaranteeSection />
