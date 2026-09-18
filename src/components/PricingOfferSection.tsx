@@ -7,7 +7,6 @@ interface PricingOfferSectionProps {
 }
 
 export const PricingOfferSection: React.FC<PricingOfferSectionProps> = ({ onOpenCheckout }) => {
-  const installments = PRICING_DATA.promoInstallments;
   const cashPrice = PRICING_DATA.promoCashPrice;
   const originalTotal = PRICING_DATA.originalTotal;
 
@@ -78,7 +77,7 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = ({ onOpen
             </div>
 
             {/* Final Price Block */}
-            <div className="mt-4 bg-[#3b442f] text-white rounded-2xl p-5 text-center shadow-md relative overflow-hidden">
+            <div className="mt-4 bg-[#3b442f] text-white rounded-2xl p-6 text-center shadow-md relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-amber-400 text-stone-950 font-black text-[10px] uppercase px-3 py-0.5 rounded-bl-lg">
                 Poupe 85% Hoje
               </div>
@@ -87,15 +86,15 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = ({ onOpen
                 Hoje, nesta página especial:
               </p>
 
-              <div className="mt-2 flex items-baseline justify-center gap-1.5">
+              <div className="mt-2 flex items-baseline justify-center gap-2">
                 <span className="text-sm sm:text-base font-semibold text-stone-200">por apenas</span>
-                <span className="text-3xl sm:text-4xl font-black text-amber-300 tracking-tight font-mono">
-                  {installments}
+                <span className="text-4xl sm:text-5xl font-black text-amber-300 tracking-tight font-mono">
+                  {cashPrice}
                 </span>
               </div>
 
-              <p className="mt-1 text-xs text-stone-200 font-medium">
-                OU APENAS <strong className="text-white text-base underline">{cashPrice}</strong> A PRONTO PAGAMENTO
+              <p className="mt-2 text-xs text-stone-200 font-medium tracking-wide uppercase">
+                Pagamento único • Sem mensalidades • Acesso vitalício imediato
               </p>
             </div>
 

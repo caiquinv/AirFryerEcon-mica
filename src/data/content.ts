@@ -408,7 +408,6 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 export const PRICING_DATA = {
   originalTotal: '112,00€',
   regularPrice: '47,00€',
-  promoInstallments: '4x de 4,99€',
   promoCashPrice: '17,90€',
   currencySymbol: '€',
   paymentBadge: 'Pagamento 100% Nacional: MB WAY • Multibanco • Cartão',

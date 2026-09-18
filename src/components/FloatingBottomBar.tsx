@@ -33,7 +33,7 @@ export const FloatingBottomBar: React.FC<FloatingBottomBarProps> = ({ onScrollTo
             Airfryer Económica (250 Receitas + 5 Bónus)
           </p>
           <p className="text-[11px] text-stone-300">
-            Apenas <strong className="text-amber-300 font-mono">17,90€</strong> a pronto pagamento ou 4x 4,99€
+            Apenas <strong className="text-amber-300 font-mono">17,90€</strong> (pagamento único • acesso vitalício)
           </p>
         </div>
 
