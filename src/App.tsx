@@ -14,6 +14,7 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingBottomBar } from './components/FloatingBottomBar';
 import { CheckoutModal } from './components/CheckoutModal';
+import { SalesNotificationToast } from './components/SalesNotificationToast';
 
 export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -87,6 +88,9 @@ export default function App() {
 
       {/* 16. Portuguese Checkout Modal with MB WAY, Multibanco & Card */}
       <CheckoutModal isOpen={isCheckoutOpen} onClose={handleCloseCheckout} />
+
+      {/* 17. Live Sales Notification Toast */}
+      <SalesNotificationToast />
     </div>
   );
 }
