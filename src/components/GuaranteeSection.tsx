@@ -58,10 +58,15 @@ export const GuaranteeSection: React.FC = () => {
             suporte@airfryereconomica.pt
           </a>
           <span>•</span>
-          <span className="flex items-center gap-1.5">
+          <a
+            href="https://instagram.com/airfryer_economicapt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 hover:text-stone-900 transition-colors"
+          >
             <Instagram className="w-3.5 h-3.5 text-stone-400" />
-            @airfryer_economica
-          </span>
+            @airfryer_economicapt
+          </a>
         </div>
       </div>
     </section>
