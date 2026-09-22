@@ -79,7 +79,7 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = () => {
             {/* Final Price Block */}
             <div className="mt-4 bg-[#3b442f] text-white rounded-2xl p-6 text-center shadow-md relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-amber-400 text-stone-950 font-black text-[10px] uppercase px-3 py-0.5 rounded-bl-lg">
-                Poupe 85% Hoje
+                Poupe 70% Hoje
               </div>
 
               <p className="text-xs font-bold text-stone-300 uppercase tracking-wider">

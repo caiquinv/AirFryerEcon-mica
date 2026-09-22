@@ -306,7 +306,7 @@ export const BONUS_DATA: BonusItem[] = [
     id: 'bonus-menu-mensal',
     title: 'Menu Mensal da Cozinha Portuguesa na Airfryer',
     subtitle: '4 Semanas Estruturadas com Almoço e Jantar',
-    originalPrice: '19,00€',
+    originalPrice: '7,00€',
     tag: 'OFERTA HOJE',
     image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80',
     description: 'Acabe com o eterno stress diário de "o que faço hoje para o jantar?". Um plano de 30 dias com pratos que agradam a toda a família e aproveitam sobras.',
@@ -316,7 +316,7 @@ export const BONUS_DATA: BonusItem[] = [
     id: 'bonus-temperos',
     title: 'O Segredo dos Temperos Nacionais & Marinadas',
     subtitle: 'O Truque dos Chefs para Carnes que Não Ficam Secas',
-    originalPrice: '15,00€',
+    originalPrice: '5,00€',
     tag: 'OFERTA HOJE',
     image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80',
     description: 'Aprenda as marinadas rápidas com louro, alho, vinho e azeite que deixam o peito de frango e as febras tenras e ultra suculentas na fritadeira.',
@@ -326,7 +326,7 @@ export const BONUS_DATA: BonusItem[] = [
     id: 'bonus-molhos',
     title: '30 Petiscos de Taberna & Molhos Saudáveis',
     subtitle: 'Para Acompanhar sem Conservantes nem Açúcar',
-    originalPrice: '12,00€',
+    originalPrice: '5,00€',
     tag: 'OFERTA HOJE',
     image: 'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=600&q=80',
     description: 'Molho de iogurte com alho e salsa, molho verde de coentros, mostarda antiga com mel e vinagretes que transformam qualquer refeição simples.',
@@ -336,7 +336,7 @@ export const BONUS_DATA: BonusItem[] = [
     id: 'bonus-sumos',
     title: '20 Chás e Sumos com Frutas Nacionais',
     subtitle: 'Com Laranja do Algarve, Maçã de Alcobaça e Pera Rocha',
-    originalPrice: '12,00€',
+    originalPrice: '4,00€',
     tag: 'OFERTA HOJE',
     image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80',
     description: 'Bebidas frescas e reconfortantes com fruta das nossas regiões para acompanhar as suas refeições e facilitar a digestão.',
@@ -346,7 +346,7 @@ export const BONUS_DATA: BonusItem[] = [
     id: 'bonus-limpeza',
     title: 'Guia de Limpeza Rápida do Cesto Antiaderente',
     subtitle: 'Como Tirar a Gordura e o Cheiro a Peixe em 3 Minutos',
-    originalPrice: '10,00€',
+    originalPrice: '4,00€',
     tag: 'OFERTA HOJE',
     image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80',
     description: 'O truque simples com água quente, vinagre e bicarbonato para desengordurar o cesto sem esfregar nem riscar o teflon.',
@@ -406,19 +406,19 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 ];
 
 export const PRICING_DATA = {
-  originalTotal: '112,00€',
-  regularPrice: '47,00€',
-  promoCashPrice: '17,90€',
+  originalTotal: '49,90€',
+  regularPrice: '29,90€',
+  promoCashPrice: '14,90€',
   currencySymbol: '€',
   paymentBadge: 'Pagamento 100% Nacional: MB WAY • Multibanco • Cartão',
   itemsIncluded: [
-    { name: 'Livro Digital: Airfryer Económica (250 Receitas em PDF)', value: '29,00€' },
-    { name: 'Guia de Compras Económicas (Continente, Pingo Doce, Lidl em PDF)', value: '15,00€' },
-    { name: 'Bónus 1: Menu Mensal Económico da Cozinha Portuguesa (PDF)', value: '19,00€' },
-    { name: 'Bónus 2: Segredo dos Temperos Nacionais & Marinadas de Taberna (PDF)', value: '15,00€' },
-    { name: 'Bónus 3: 30 Petiscos de Taberna & Molhos Caseiros Saudáveis (PDF)', value: '12,00€' },
-    { name: 'Bónus 4: 20 Sumos e Chás com Frutas Nacionais (PDF)', value: '12,00€' },
-    { name: 'Bónus 5: Guia de Limpeza Rápida do Cesto Antiaderente (PDF)', value: '10,00€' },
+    { name: 'Livro Digital: Airfryer Económica (250 Receitas em PDF)', value: '19,90€' },
+    { name: 'Guia de Compras Económicas (Continente, Pingo Doce, Lidl em PDF)', value: '5,00€' },
+    { name: 'Bónus 1: Menu Mensal Económico da Cozinha Portuguesa (PDF)', value: '7,00€' },
+    { name: 'Bónus 2: Segredo dos Temperos Nacionais & Marinadas de Taberna (PDF)', value: '5,00€' },
+    { name: 'Bónus 3: 30 Petiscos de Taberna & Molhos Caseiros Saudáveis (PDF)', value: '5,00€' },
+    { name: 'Bónus 4: 20 Sumos e Chás com Frutas Nacionais (PDF)', value: '4,00€' },
+    { name: 'Bónus 5: Guia de Limpeza Rápida do Cesto Antiaderente (PDF)', value: '4,00€' },
   ],
 };
 
@@ -431,7 +431,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     question: 'Posso pagar por MB WAY ou Multibanco?',
     answer:
-      'Sim! O sistema suporta os métodos preferidos em Portugal: MB WAY (recebe o pedido de confirmação no seu telemóvel para aprovar os 17,90€), Referência Multibanco (para pagar no Multibanco ou no homebanking do seu banco) ou Cartão de Débito/Crédito.',
+      'Sim! O sistema suporta os métodos preferidos em Portugal: MB WAY (recebe o pedido de confirmação no seu telemóvel para aprovar os 14,90€), Referência Multibanco (para pagar no Multibanco ou no homebanking do seu banco) ou Cartão de Débito/Crédito.',
   },
   {
     question: 'Os ingredientes são fáceis de encontrar em Portugal?',

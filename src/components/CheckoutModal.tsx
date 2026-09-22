@@ -85,8 +85,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 </p>
               </div>
               <div className="text-right">
-                <span className="text-stone-400 line-through text-[11px] block">112,00€</span>
-                <span className="text-base font-black text-[#22c55e] font-mono">17,90€</span>
+                <span className="text-stone-400 line-through text-[11px] block">49,90€</span>
+                <span className="text-base font-black text-[#22c55e] font-mono">14,90€</span>
               </div>
             </div>
 
@@ -201,7 +201,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                   <span className="text-base">📱</span>
                   <div>
                     <strong className="text-emerald-900 block">Pagamento Instantâneo MB WAY:</strong>
-                    <span>Ao clicar em confirmar, receberá o pedido de 17,90€ no seu telemóvel para aprovar no MB WAY em segundos.</span>
+                    <span>Ao clicar em confirmar, receberá o pedido de 14,90€ no seu telemóvel para aprovar no MB WAY em segundos.</span>
                   </div>
                 </div>
               )}
@@ -227,7 +227,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                   <span>A gerar o seu acesso seguro...</span>
                 ) : (
                   <>
-                    <span>Confirmar Encomenda (17,90€)</span>
+                    <span>Confirmar Encomenda (14,90€)</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
@@ -279,7 +279,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                   </div>
                   <div>
                     <span className="text-stone-500 text-[10px] block">Montante:</span>
-                    <strong className="text-emerald-700 text-sm">17,90 €</strong>
+                    <strong className="text-emerald-700 text-sm">14,90 €</strong>
                   </div>
                   <div className="col-span-2 pt-1 border-t border-stone-100">
                     <span className="text-stone-500 text-[10px] block">Referência:</span>

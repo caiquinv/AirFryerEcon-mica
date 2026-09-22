@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { TopUrgencyBar } from './components/TopUrgencyBar';
 import { HeroSection } from './components/HeroSection';
 import { SocialProofVideo } from './components/SocialProofVideo';
 import { SolutionSection } from './components/SolutionSection';
@@ -40,9 +39,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#1e2718] text-stone-100 flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
-      {/* 1. Urgency Countdown Top Bar */}
-      <TopUrgencyBar onScrollToOffer={handleScrollToOffer} />
-
       <main className="flex-1">
         {/* 2. Main Hero with Chef & PDF Book Bundle */}
         <HeroSection onScrollToOffer={handleScrollToOffer} />

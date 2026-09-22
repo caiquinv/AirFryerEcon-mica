@@ -98,7 +98,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
                 Valor Somado dos Bónus
               </span>
               <h3 className="text-2xl font-black text-white mt-1">
-                68,00€ em Presentes
+                25,00€ em Presentes
               </h3>
               <p className="text-xs text-stone-300 mt-2 leading-relaxed">
                 Ao encomendar o seu acesso hoje, recebe todos os 5 manuais digitais sem pagar mais nenhum cêntimo por eles.

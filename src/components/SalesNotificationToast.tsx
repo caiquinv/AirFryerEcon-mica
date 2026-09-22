@@ -49,21 +49,21 @@ export const SalesNotificationToast: React.FC = () => {
       setCurrentIndex(index);
       setIsVisible(true);
 
-      // Fica visível por 2 segundos e some
+      // Fica visível por 3 segundos e some
       timeoutId = setTimeout(() => {
         if (!active) return;
         setIsVisible(false);
 
-        // Após 8 segundos de ter sumido, aparece outro nome
+        // Aparece a cada 40 segundos
         timeoutId = setTimeout(() => {
           if (!active) return;
           const nextIndex = (index + 1) % SALES_NOTIFICATIONS.length;
           showNotification(nextIndex);
-        }, 8000);
-      }, 2000);
+        }, 40000);
+      }, 3000);
     };
 
-    // Primeira aparição: após 7 segundos da entrada no site
+    // Primeira aparição: 7 segundos após carregar a página
     timeoutId = setTimeout(() => {
       showNotification(0);
     }, 7000);
