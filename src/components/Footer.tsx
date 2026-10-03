@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
       {modalContent && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white text-stone-900 rounded-2xl max-w-lg w-full p-6 text-left shadow-2xl relative">
-            <h3 className="text-lg font-bold flex items-center gap-2 mb-3">
+            <h2 className="text-lg font-bold flex items-center gap-2 mb-3">
               {modalContent === 'termos' ? (
                 <>
                   <FileText className="w-5 h-5 text-emerald-600" />
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
                   Política de Privacidade (RGPD)
                 </>
               )}
-            </h3>
+            </h2>
 
             <div className="text-xs text-stone-600 space-y-2 max-h-80 overflow-y-auto pr-2">
               {modalContent === 'termos' ? (

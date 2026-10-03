@@ -69,6 +69,10 @@ export const RecipeCategoriesSection: React.FC<RecipeCategoriesSectionProps> = (
                 <img
                   src={recipe.image}
                   alt={recipe.title}
+                  loading="lazy"
+                  decoding="async"
+                  width={320}
+                  height={176}
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />

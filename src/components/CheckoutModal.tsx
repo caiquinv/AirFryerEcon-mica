@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { X, ShieldCheck, Lock, CheckCircle2, Download, Smartphone, CreditCard, Landmark, Sparkles, ArrowRight } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { PRICING_DATA } from '../data/content';
 
 interface CheckoutModalProps {
@@ -29,11 +28,14 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
       setIsSubmitting(false);
       setStep('success');
 
-      // Trigger celebratory confetti
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
+      // Trigger celebratory confetti dynamically
+      import('canvas-confetti').then((confettiModule) => {
+        const confetti = confettiModule.default;
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
       });
     }, 900);
   };
@@ -54,9 +56,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               🔒
             </div>
             <div>
-              <h3 className="text-sm sm:text-base font-extrabold leading-tight">
+              <h2 className="text-sm sm:text-base font-extrabold leading-tight">
                 Finalizar Acesso Seguro 🇵🇹
-              </h3>
+              </h2>
               <p className="text-[11px] text-amber-300 font-medium">
                 Servidores Nacionais e Encriptação Bancária SSL
               </p>
@@ -257,9 +259,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                 Pagamento Registado com Sucesso 🇵🇹
               </span>
-              <h3 className="text-2xl font-black text-stone-900 mt-2">
+              <h2 className="text-2xl font-black text-stone-900 mt-2">
                 Muito Obrigado, {name || 'Cliente'}!
-              </h3>
+              </h2>
               <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-sm mx-auto">
                 O seu acesso ao <strong>Airfryer Económica (250 Receitas + 5 Bónus)</strong> foi emitido para <strong>{email}</strong>.
               </p>

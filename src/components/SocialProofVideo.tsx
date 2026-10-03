@@ -9,7 +9,7 @@ import { Star, CheckCircle2, Camera } from 'lucide-react';
  * Também pode carregar uma foto diretamente através do botão no canto da imagem!
  */
 export const DEFAULT_CUSTOMER_PHOTO =
-  'https://iili.io/nom6dSR.png';
+  '/maria_depoimento.webp';
 
 export const SocialProofVideo: React.FC = () => {
   const [photo, setPhoto] = useState<string>(DEFAULT_CUSTOMER_PHOTO);
@@ -58,8 +58,11 @@ export const SocialProofVideo: React.FC = () => {
             <img
               src={photo}
               alt="Maria na cozinha — Cliente Airfryer Económica"
+              loading="lazy"
+              decoding="async"
+              width={460}
+              height={460}
               className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-700"
-              referrerPolicy="no-referrer"
             />
 
             {/* Subtle Gradient Overlay on Bottom for Badge Contrast */}
@@ -107,8 +110,8 @@ export const SocialProofVideo: React.FC = () => {
             <div>
               {/* Título com destaque de cor idêntico à referência */}
               <h3 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight leading-snug sm:leading-tight">
-                „Uma das <span className="text-amber-600">melhores compras</span> que fiz nos{' '}
-                <span className="text-amber-600">últimos tempos!“</span>
+                „Uma das <span className="text-amber-700">melhores compras</span> que fiz nos{' '}
+                <span className="text-amber-700">últimos tempos!“</span>
               </h3>
 
               {/* Corpo do Depoimento */}

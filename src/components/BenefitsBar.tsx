@@ -5,6 +5,7 @@ export const BenefitsBar: React.FC = () => {
   return (
     <section className="bg-[#2d3724] text-white py-12 sm:py-16 border-y border-[#3e4c32]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 className="sr-only">Principais Benefícios da Airfryer Económica</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[#445437]">
           {/* Item 1 */}
           <div className="pt-6 md:pt-0 md:px-6 flex flex-col items-center">

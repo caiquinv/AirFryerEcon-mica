@@ -78,10 +78,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToOffer }) => 
               <div className="md:col-span-5 relative group">
                 <div className="relative overflow-hidden rounded-xl border-2 border-amber-400/70 shadow-lg">
                   <img
-                    src="https://iili.io/nobI4xp.png"
+                    src="/chef_antonio_valente.webp"
                     alt="Chef António Valente"
+                    width={400}
+                    height={320}
+                    fetchPriority="high"
+                    decoding="sync"
                     className="w-full h-56 sm:h-64 object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-3 text-left">
                     <p className="text-white font-bold text-sm">Chef António Valente</p>

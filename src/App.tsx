@@ -12,8 +12,11 @@ import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingBottomBar } from './components/FloatingBottomBar';
-import { CheckoutModal } from './components/CheckoutModal';
 import { SalesNotificationToast } from './components/SalesNotificationToast';
+
+const CheckoutModal = React.lazy(() =>
+  import('./components/CheckoutModal').then((m) => ({ default: m.CheckoutModal }))
+);
 
 export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -83,7 +86,11 @@ export default function App() {
       <FloatingBottomBar onScrollToOffer={handleScrollToOffer} />
 
       {/* 16. Portuguese Checkout Modal with MB WAY, Multibanco & Card */}
-      <CheckoutModal isOpen={isCheckoutOpen} onClose={handleCloseCheckout} />
+      {isCheckoutOpen && (
+        <React.Suspense fallback={null}>
+          <CheckoutModal isOpen={isCheckoutOpen} onClose={handleCloseCheckout} />
+        </React.Suspense>
+      )}
 
       {/* 17. Live Sales Notification Toast */}
       <SalesNotificationToast />

@@ -38,6 +38,10 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
                 <img
                   src={bonus.image}
                   alt={bonus.title}
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={176}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
@@ -54,7 +58,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-xs text-stone-400 line-through">
+                    <span className="text-xs text-stone-500 line-through">
                       De {bonus.originalPrice}
                     </span>
                     <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">

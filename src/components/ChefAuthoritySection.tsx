@@ -26,10 +26,13 @@ export const ChefAuthoritySection: React.FC = () => {
           <div className="relative max-w-sm mx-auto mb-8">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[#5d6d4a]">
               <img
-                src="https://iili.io/nobI4xp.png"
+                src="/chef_antonio_valente.webp"
                 alt="Chef António Valente"
+                loading="lazy"
+                decoding="async"
+                width={384}
+                height={320}
                 className="w-full h-72 sm:h-80 object-cover object-top"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 flex items-center justify-between text-xs text-stone-200">
                 <span className="font-semibold text-white flex items-center gap-1">

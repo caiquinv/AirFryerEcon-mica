@@ -72,7 +72,7 @@ export const CHEF_DATA = {
   name: 'Chef António Valente',
   role: 'Chef Executivo & Mestre da Gastronomia Portuguesa',
   subtitle: 'Autor do Livro Airfryer Económica',
-  image: 'https://iili.io/nobI4xp.png',
+  image: '/chef_antonio_valente.webp',
   bio: 'Com mais de 20 anos de liderança em cozinhas de referência de norte a sul de Portugal e consultor de restauração tradicional, o Chef António Valente conhece a realidade e as dificuldades das famílias portuguesas: o cansaço ao fim do dia de trabalho, a escalada dos preços nos supermercados e o peso crescente da fatura da luz.',
   bioSecond:
     '«Recuso-me a aceitar que para comer bem tenhamos de gastar rios de dinheiro ou passar duas horas ao fogão. Criei o livro Airfryer Económica para provar que a culinária tradicional portuguesa ganha vida nova na fritadeira sem óleo: 250 receitas rigorosamente calibradas para poupar tempo e euros na conta da luz, com a comida a sair no ponto, tenra por dentro e com aquela crosta estaladiça que todos adoram.»',
@@ -115,7 +115,7 @@ export const RECIPES_DATA: Recipe[] = [
     ingredientsCount: 5,
     difficulty: 'Muito Fácil',
     calories: '190 kcal/unidade',
-    image: 'https://iili.io/nob7yzb.png',
+    image: '/pasteis_de_nata.webp',
     description: 'Massa folhada incrivelmente estaladiça e creme aveludado com pontinhos tostados, perfumado com limão e canela.',
     ingredients: [
       '1 rolo de massa folhada fresca retangular',

@@ -32,13 +32,17 @@ export const CommunitySection: React.FC = () => {
                   <img
                     src={t.avatar}
                     alt={t.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={40}
+                    height={40}
                     className="w-10 h-10 rounded-full object-cover border border-amber-400/40"
                   />
                   <div>
-                    <h4 className="text-xs font-bold text-white flex items-center gap-1">
+                    <h3 className="text-xs font-bold text-white flex items-center gap-1">
                       {t.name}
                       <CheckCircle2 className="w-3 h-3 text-emerald-400 shrink-0" />
-                    </h4>
+                    </h3>
                     <span className="text-[10px] text-stone-300">{t.location}</span>
                   </div>
                 </div>
