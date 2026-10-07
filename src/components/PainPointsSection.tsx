@@ -47,7 +47,7 @@ export const PainPointsSection: React.FC = () => {
             <div className="flex items-center gap-4 text-xs font-bold text-amber-300 mb-2">
               <span className="flex items-center gap-1 bg-black/30 px-2 py-0.5 rounded-full border border-amber-500/30 animate-bounce">
                 <TrendingDown className="w-3.5 h-3.5 text-rose-400" />
-                -80€/mês (Takeaway + Conta da Luz)
+                Desperdício (Takeaway + Conta da Luz)
               </span>
             </div>
 

@@ -13,7 +13,7 @@ export const BenefitsBar: React.FC = () => {
               <PiggyBank className="w-7 h-7" />
             </div>
             <h3 className="text-lg sm:text-xl font-black text-white">
-              Poupe até 80€/mês
+              Refeições rápidas e baratas
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-stone-300 leading-relaxed max-w-xs">
               Corte nas entregas de comida (Glovo/Uber Eats) e reduza a fatura da luz ao substituir o forno elétrico pela Airfryer rápida.

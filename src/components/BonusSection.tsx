@@ -1,9 +1,9 @@
 import React from 'react';
 import { Gift, CheckCircle2, Sparkles } from 'lucide-react';
-import { BONUS_DATA } from '../data/content';
+import { BONUS_DATA, HOTMART_CHECKOUT_URL } from '../data/content';
 
 interface BonusSectionProps {
-  onScrollToOffer: () => void;
+  onScrollToOffer?: () => void;
 }
 
 export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) => {
@@ -24,8 +24,53 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
           Menu do mês, segredo de temperos, molhos caseiros, sumos e guia de limpeza. 5 bónus que complementam perfeitamente as suas 250 receitas — <strong>todos 100% gratuitos</strong> no seu pacote.
         </p>
 
-        {/* 5 Bonus Cards Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+        {/* ==============================================================
+            CELULAR: Cartões compactos SEM foto
+            (só selo "Bónus #", título, preço riscado "Grátis" e uma linha)
+           ============================================================== */}
+        <div className="md:hidden space-y-3 mt-6 text-left">
+          {BONUS_DATA.map((bonus, index) => (
+            <div
+              key={bonus.id}
+              className="bg-white rounded-xl p-3.5 border border-stone-200 shadow-xs flex flex-col gap-1.5"
+            >
+              <div className="flex items-center justify-between">
+                <span className="bg-amber-100 text-amber-900 border border-amber-300/60 text-[10px] font-extrabold px-2 py-0.5 rounded font-mono">
+                  Bónus #{index + 1}
+                </span>
+                <div className="text-xs">
+                  <span className="text-stone-400 line-through mr-1.5 font-mono">{bonus.originalPrice}</span>
+                  <span className="font-extrabold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                    Grátis
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-stone-900 leading-snug">
+                {bonus.title}
+              </h3>
+              <p className="text-xs text-stone-600 line-clamp-1 leading-snug">
+                {bonus.description}
+              </p>
+            </div>
+          ))}
+
+          {/* Botão de checkout no celular */}
+          <div className="pt-2">
+            <a
+              href={HOTMART_CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center min-h-[52px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-sm py-3.5 px-4 rounded-xl shadow-md cursor-pointer transition-all active:scale-98 text-center"
+            >
+              QUERO AS 250 RECEITAS →
+            </a>
+          </div>
+        </div>
+
+        {/* ==============================================================
+            DESKTOP (hidden md:grid): Cartões completos com foto e detalhes
+           ============================================================== */}
+        <div className="hidden md:grid mt-10 grid-cols-2 lg:grid-cols-3 gap-6 text-left">
           {BONUS_DATA.map((bonus, index) => (
             <div
               key={bonus.id}
@@ -58,7 +103,7 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-xs text-stone-500 line-through">
+                    <span className="text-xs text-stone-500 line-through font-mono">
                       De {bonus.originalPrice}
                     </span>
                     <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
@@ -110,12 +155,14 @@ export const BonusSection: React.FC<BonusSectionProps> = ({ onScrollToOffer }) =
             </div>
 
             <div className="mt-6 pt-4 border-t border-[#3e4d31]">
-              <button
-                onClick={onScrollToOffer}
-                className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-black text-xs sm:text-sm py-3 px-4 rounded-xl shadow cursor-pointer transition-all active:scale-98 text-center uppercase"
+              <a
+                href={HOTMART_CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center min-h-[52px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-sm py-3 px-4 rounded-xl shadow cursor-pointer transition-all active:scale-98 text-center"
               >
-                Garantir Todos os Bónus Grátis ➔
-              </button>
+                QUERO AS 250 RECEITAS →
+              </a>
             </div>
           </div>
         </div>

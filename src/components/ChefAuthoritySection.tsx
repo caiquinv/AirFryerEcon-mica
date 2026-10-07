@@ -23,7 +23,7 @@ export const ChefAuthoritySection: React.FC = () => {
           </div>
 
           {/* Chef Image with refined styling */}
-          <div className="relative max-w-sm mx-auto mb-8">
+          <div className="relative max-w-sm mx-auto mb-6 sm:mb-8">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[#5d6d4a]">
               <img
                 src="/chef_antonio_valente.webp"
@@ -32,12 +32,12 @@ export const ChefAuthoritySection: React.FC = () => {
                 decoding="async"
                 width={384}
                 height={320}
-                className="w-full h-72 sm:h-80 object-cover object-top"
+                className="w-full max-h-[200px] sm:max-h-none sm:h-80 object-cover object-top"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 flex items-center justify-between text-xs text-stone-200">
-                <span className="font-semibold text-white flex items-center gap-1">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-3 sm:p-4 flex items-center justify-between text-xs text-stone-200">
+                <span className="font-semibold text-white flex items-center gap-1 text-[11px] sm:text-xs">
                   <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  +250 Receitas Criadas e Aprovadas
+                  +250 Receitas Aprovadas
                 </span>
                 <span className="bg-emerald-600 text-white font-bold px-2 py-0.5 rounded text-[10px] flex items-center gap-1">
                   🇵🇹 Portugal
@@ -47,17 +47,25 @@ export const ChefAuthoritySection: React.FC = () => {
           </div>
 
           {/* Personal message & story */}
-          <div className="space-y-4 text-sm sm:text-base text-stone-200 leading-relaxed max-w-2xl mx-auto">
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-stone-200 leading-relaxed max-w-2xl mx-auto">
+            {/* Primeiro parágrafo mostrado em todas as telas */}
             <p className="first-letter:text-3xl first-letter:font-black first-letter:text-amber-400 first-letter:mr-1">
               {CHEF_DATA.bio}
             </p>
-            <p className="bg-[#313927] p-4 rounded-xl border border-[#485539] text-stone-100 font-medium">
+
+            {/* Citação curta no celular */}
+            <div className="block md:hidden bg-[#313927] p-3 rounded-xl border border-[#485539] text-xs text-stone-100 font-medium italic">
+              «Criei o livro Airfryer Económica para provar que a culinária tradicional ganha vida nova na fritadeira sem óleo: 250 receitas para poupar tempo e dinheiro.»
+            </div>
+
+            {/* Parágrafo longo no desktop */}
+            <p className="hidden md:block bg-[#313927] p-4 rounded-xl border border-[#485539] text-stone-100 font-medium">
               {CHEF_DATA.bioSecond}
             </p>
           </div>
 
-          {/* 3 Pillars badges */}
-          <div className="mt-8 pt-6 border-t border-[#4f5d3f] grid grid-cols-1 sm:grid-cols-3 gap-3 text-center text-xs text-stone-300">
+          {/* 3 Pillars badges escondidos no celular para reduzir altura da página */}
+          <div className="hidden md:grid mt-8 pt-6 border-t border-[#4f5d3f] grid-cols-1 sm:grid-cols-3 gap-3 text-center text-xs text-stone-300">
             <div className="flex items-center justify-center gap-2 bg-[#313927] py-2.5 px-3 rounded-xl border border-[#485539]">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>Sem Fracassos na Cozinha</span>

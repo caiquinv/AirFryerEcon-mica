@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
-import { FAQ_DATA } from '../data/content';
+import { FAQ_DATA, HOTMART_CHECKOUT_URL } from '../data/content';
 
 interface FaqSectionProps {
-  onScrollToOffer: () => void;
+  onScrollToOffer?: () => void;
 }
 
 export const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToOffer }) => {
@@ -64,18 +64,19 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToOffer }) => {
 
         {/* Final CTA Container inside FAQ section matching screenshot */}
         <div className="mt-14 max-w-md mx-auto">
-          <button
-            onClick={onScrollToOffer}
+          <a
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             id="faq-cta-button"
-            className="w-full group inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-2xl transition-all cursor-pointer border-t border-emerald-300"
+            className="w-full group inline-flex items-center justify-center min-h-[56px] bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-2xl transition-all cursor-pointer border-t border-emerald-300 text-center"
           >
-            <span>QUERO TRANSFORMAR AS MINHAS REFEIÇÕES</span>
-            <span className="group-hover:translate-x-1.5 transition-transform duration-200">➔</span>
-          </button>
+            QUERO AS 250 RECEITAS →
+          </a>
 
-          <p className="mt-3 text-amber-300 text-xs font-semibold flex items-center justify-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            Últimas <strong>9 vagas</strong> com desconto garantido
+          <p className="mt-3 text-emerald-300 text-xs font-semibold flex items-center justify-center gap-1.5">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+            Acesso imediato por e-mail após o pagamento
           </p>
         </div>
       </div>

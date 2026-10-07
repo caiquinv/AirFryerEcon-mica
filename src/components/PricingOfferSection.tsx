@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, Sparkles, ShieldCheck, Zap, Mail, Lock } from 'lucide-react';
-import { PRICING_DATA } from '../data/content';
+import { PRICING_DATA, HOTMART_CHECKOUT_URL } from '../data/content';
 
 interface PricingOfferSectionProps {
   onOpenCheckout?: () => void;
@@ -14,9 +14,9 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = () => {
     <section id="oferta" className="bg-[#faf7f0] text-stone-900 py-14 sm:py-24 border-b border-stone-200">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         {/* Top Urgency Pill */}
-        <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 border border-amber-300 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 animate-pulse">
+        <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 border border-amber-300 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider mb-4">
           <Zap className="w-3.5 h-3.5 text-amber-600 fill-amber-500" />
-          Preço Especial de Lançamento em Portugal 🇵🇹
+          Oferta de lançamento
         </div>
 
         <h2 className="text-3xl sm:text-5xl font-black text-stone-900 tracking-tight">
@@ -119,17 +119,21 @@ export const PricingOfferSection: React.FC<PricingOfferSectionProps> = () => {
             {/* Big Green Action Button */}
             <div className="mt-5">
               <a
-                href="https://pay.hotmart.com/D107662872I"
+                href={HOTMART_CHECKOUT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="pricing-cta-button"
-                className="w-full group inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-xl transition-all cursor-pointer border-t border-emerald-300 text-center"
+                className="w-full group inline-flex items-center justify-center min-h-[56px] bg-[#22c55e] hover:bg-[#16a34a] active:scale-98 text-white font-black text-base sm:text-lg uppercase tracking-wide py-4 px-6 rounded-xl shadow-xl transition-all cursor-pointer border-t border-emerald-300 text-center"
               >
-                <span>SIM, QUERO AS 250 RECEITAS EM PORTUGAL!</span>
-                <span className="group-hover:translate-x-1.5 transition-transform duration-200">➔</span>
+                QUERO AS 250 RECEITAS →
               </a>
 
-              <p className="mt-3 text-center text-[11px] text-stone-500 font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
+              {/* Linha de garantia repetida logo abaixo do botão conforme solicitado */}
+              <p className="mt-2.5 text-center text-xs sm:text-[13px] text-stone-700 font-semibold leading-snug">
+                7 dias de garantia: devolvemos 100% do valor, sem perguntas
+              </p>
+
+              <p className="mt-2.5 text-center text-[11px] text-stone-500 font-semibold uppercase tracking-wider flex items-center justify-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
                 Acesso Imediato no seu E-mail • Garantia de 7 Dias
               </p>

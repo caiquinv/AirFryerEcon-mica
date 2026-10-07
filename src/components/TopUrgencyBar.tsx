@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, Flame } from 'lucide-react';
+import { HOTMART_CHECKOUT_URL } from '../data/content';
 
 interface TopUrgencyBarProps {
-  onScrollToOffer: () => void;
+  onScrollToOffer?: () => void;
 }
 
 export const TopUrgencyBar: React.FC<TopUrgencyBarProps> = ({ onScrollToOffer }) => {
@@ -42,12 +43,14 @@ export const TopUrgencyBar: React.FC<TopUrgencyBarProps> = ({ onScrollToOffer })
           <Clock className="w-3.5 h-3.5 text-amber-400" />
           {format(timeLeft.hours)}:{format(timeLeft.minutes)}:{format(timeLeft.seconds)}
         </span>
-        <button
-          onClick={onScrollToOffer}
-          className="hidden sm:inline-flex items-center gap-1 text-xs text-white bg-[#22c55e] hover:bg-[#16a34a] font-bold px-3 py-1 rounded transition-colors duration-150 cursor-pointer"
+        <a
+          href={HOTMART_CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden sm:inline-flex items-center gap-1 text-xs text-white bg-[#22c55e] hover:bg-[#16a34a] font-bold px-3 py-1 rounded transition-colors duration-150 cursor-pointer text-center"
         >
           Garantir Vaga ➔
-        </button>
+        </a>
       </div>
     </aside>
   );

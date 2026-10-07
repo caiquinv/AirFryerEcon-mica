@@ -1,19 +1,21 @@
 import { Recipe, BonusItem, Testimonial, FaqItem } from '../types';
 
+export const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/D107662872I';
+
 export const HERO_DATA = {
   siteName: 'Airfryer Económica',
   urgencyText: 'OFERTA ESPECIAL VÁLIDA HOJE EM PORTUGAL 🇵🇹',
   headline: 'Airfryer Económica',
-  subheadline: '250 Receitas Portuguesas Rápidas e Deliciosas para Poupar Tempo e Dinheiro na Cozinha',
-  detailedPitch: 'Poupe até 80€/mês no supermercado e na fatura da luz com refeições estaladiças prontas em 15 minutos, sem fritos nem tachos sujos.',
-  tags: ['LIVRO DIGITAL EM PDF', 'DESCARREGAMENTO IMEDIATO', 'ACESSO VITALÍCIO', 'INGREDIENTES NACIONAIS'],
-  ctaText: 'QUERO AS 250 RECEITAS ECONÓMICAS!',
+  subheadline: '250 Receitas Portuguesas na Airfryer para Poupar Tempo e Dinheiro',
+  detailedPitch: 'Prontas em 15 minutos, com ingredientes do Continente, Pingo Doce e Lidl.',
+  tags: ['PDF', 'TELEMÓVEL E PC', 'ACESSO VITALÍCIO'],
+  ctaText: 'QUERO AS 250 RECEITAS →',
   badges: [
     'Acesso imediato no seu e-mail',
     'Pagamento seguro com MB WAY e Multibanco',
     '7 dias de garantia incondicional',
   ],
-  authorityStamp: 'O Livro Digital de Airfryer Nº 1 nas Cozinhas de Portugal',
+  authorityStamp: 'Livro digital em PDF · Edição Portugal',
   marketContext: 'Adaptado aos ingredientes do Continente, Pingo Doce, Lidl, Mercadona e Auchan',
 };
 
@@ -286,7 +288,7 @@ export const RECIPES_DATA: Recipe[] = [
 export const BENEFITS_DATA = [
   {
     icon: 'wallet',
-    title: 'Poupe até 80€ por mês',
+    title: 'Refeições rápidas e baratas',
     description: 'Corte radicalmente nos pedidos da Glovo ou Uber Eats e reduza a fatura da eletricidade (a Airfryer consome até 70% menos energia que o forno elétrico tradicional).',
   },
   {
@@ -361,7 +363,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     location: 'Coimbra',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    date: 'Ontem às 21:14',
+    date: '',
     message:
       'Espetacular! A minha airfryer estava encostada a um canto porque só sabia fazer batatas pré-fritas. Ontem fiz o Bacalhau com Broa e os Pastéis de Nata em 9 minutos. O meu marido e os miúdos limparam os pratos todos!',
     dishName: 'Bacalhau com Broa & Pastéis de Nata',
@@ -373,7 +375,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     location: 'Vila Nova de Gaia (Porto)',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    date: 'Há 2 dias',
+    date: '',
     message:
       'Só na primeira semana poupei mais de 50€ em entregas da Glovo. Chego cansado do trabalho, abro o livro em PDF no telemóvel, vejo a receita de 10 minutos com o que tenho no frigorífico e fica divinal. Adeus ao forno a gastar luz!',
     dishName: 'Bifanas e Costeletas Douradas',
@@ -385,7 +387,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     location: 'Sintra (Lisboa)',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    date: 'Há 3 dias',
+    date: '',
     message:
       'O bónus das marinadas portuguesas com vinho branco e alho vale ouro! O peito de frango nunca mais ficou seco ou tipo sola de sapato. Fica suculento e douradinho.',
     dishName: 'Frango com Marinada de Alho e Ervas',
@@ -397,7 +399,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     location: 'Guimarães',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
     rating: 5,
-    date: 'Esta semana',
+    date: '',
     message:
       'A lista de compras separada por secções do Pingo Doce e Continente poupa imenso tempo. Paguei por MB WAY e recebi o acesso no mesmo segundo no meu e-mail. Recomendo vivamente!',
     dishName: 'Alheira Crocante & Pataniscas',

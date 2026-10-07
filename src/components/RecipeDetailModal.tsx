@@ -1,11 +1,12 @@
 import React from 'react';
 import { X, Clock, Flame, ChefHat, Check, ShoppingCart, Sparkles } from 'lucide-react';
 import { Recipe } from '../types';
+import { HOTMART_CHECKOUT_URL } from '../data/content';
 
 interface RecipeDetailModalProps {
   recipe: Recipe | null;
   onClose: () => void;
-  onOpenCheckout: () => void;
+  onOpenCheckout?: () => void;
 }
 
 export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
@@ -129,15 +130,14 @@ export const RecipeDetailModal: React.FC<RecipeDetailModalProps> = ({
             </span>
           </div>
 
-          <button
-            onClick={() => {
-              onClose();
-              onOpenCheckout();
-            }}
-            className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow cursor-pointer transition-all active:scale-98 whitespace-nowrap"
+          <a
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-[#22c55e] hover:bg-[#16a34a] text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow cursor-pointer transition-all active:scale-98 whitespace-nowrap text-center inline-block"
           >
-            Quero as 250 Receitas ➔
-          </button>
+            QUERO AS 250 RECEITAS →
+          </a>
         </div>
       </div>
     </div>
